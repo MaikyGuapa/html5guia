@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black; /* Color de fondo por defecto para el borde */
+    background-image: url('old_map.png'); /* Ruta a la imagen de fondo */
+    background-size: auto; /* Mantiene el tamaño original de la imagen */
+    background-position: center; /* Alinea la imagen en el centro */
+    background-repeat: repeat; /* Repite la imagen para cubrir el fondo */
+    color: rgb(0, 0, 0); /* Cambia el color del texto para que sea visible sobre el fondo */
+    border: 20px solid transparent; /* Espacio para el borde */
+    box-shadow: inset 0 0 0 20px black; /* Color de fondo del borde */
+}
+
+.header {
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido */
+    padding: 30px; /* Espacio alrededor del header */
+    background-color: rgba(51, 51, 51); /* Fondo del header */
+    border-bottom: 10px solid black; /* Línea negra fina debajo de la cabecera */
+}
+
+.header-image {
+    width: 50px; /* Tamaño pequeño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 20px; /* Espacio entre la imagen y el título */
+}
+
+.header-title {
+    color: #fff; /* Cambia el color del texto según sea necesario */
+    font-size: 2em; /* Ajusta el tamaño de la fuente */
+    margin: 0; /* Elimina el margen por defecto */
+}
+
+.circular-elements {
+    display: flex;
+    justify-content: space-around;
+    margin: 0; /* Eliminar margen superior */
+    padding: 10px 0; /* Añadir espacio interno para que se vea el fondo */
+    position: relative; /* Permite el fondo detrás de los círculos */
+}
+
+.circular-elements::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('red015.jpg'); /* Imagen de fondo detrás de los círculos */
+    background-repeat: repeat; /* Repite la imagen para evitar pixelado */
+    z-index: 1; /* Asegura que este fondo esté detrás de los círculos */
+}
+
+.circle {
+    display: flex;
+    flex-direction: column; /* Organiza el contenido verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+    width: 120px; /* Ajusta el ancho del círculo */
+    overflow: hidden; /* Asegura que no se salgan elementos */
+    position: relative; /* Asegura que los círculos estén por encima del fondo */
+    z-index: 2; /* Asegura que los círculos estén por encima del fondo */
+}
+
+.circle img {
+    width: 75%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-bottom: 5px; /* Espacio entre la imagen y el texto */
+}
+
+.circle-text {
+    text-align: center; /* Centra el texto debajo de la imagen */
+}
+
+.gray-text {
+    color: gray; /* Color gris */
+    font-weight: bold;
+}
+
+.yellow-text {
+    color: yellow; /* Color amarillo */
+    font-weight: bold;
+}
+
+.blocks {
+    display: flex;
+    justify-content: space-around;
+    margin: 0; /* Eliminar margen superior */
+    padding-top: 25px;
+    padding-bottom: 25px;
+    position: relative; /* Para permitir el fondo detrás de los bloques */
+}
+
+.blocks::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('lgrey008.jpg'); /* Imagen de fondo detrás de los bloques */
+    background-repeat: repeat; /* Repite la imagen para evitar pixelado */
+    z-index: 1; /* Asegura que este fondo esté detrás de los bloques */
+}
+
+.block {
+    width: 25%; /* Mantiene el ancho del bloque (ajustado a 25%) */
+    text-align: center;
+    background-color: white; /* Fondo blanco para los bloques */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px; /* Espacio interno */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    position: relative; /* Posicionamiento relativo para los bloques */
+    z-index: 2; /* Para que se superpongan sobre el fondo */
+}
+
+.block img {
+    width: 100%; /* Ajusta el tamaño de las imágenes en los bloques a 100% */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.block h3 {
+    position: relative; /* Necesario para el posicionamiento del pseudo-elemento */
+    padding-bottom: 5px; /* Espacio entre el texto y la línea */
+    margin-bottom: 10px; /* Espacio entre la línea y el contenido debajo */
+}
+
+.block h3::after {
+    content: ""; /* Necesario para crear el pseudo-elemento */
+    display: block; /* Para que funcione como un bloque */
+    height: 2px; /* Altura de la línea */
+    background: rgba(0, 0, 0, 0.5); /* Color de la línea */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Sombra de la línea */
+    margin-top: 10px; /* Espacio entre el texto y la línea */
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(51, 51, 51); /* Fondo del footer con transparencia */
+    color: white;
+    border-top: 10px solid black; /* Línea negra encima del footer */
+    margin: 0; /* Eliminar margen superior */
+}
